@@ -21,5 +21,17 @@ class Finder
         }
         Console.Write("]");
     }
-
+    static String[] createArrayWithLengthOfThreeChar (String[] array)
+    {
+        String[] arrayOfThreeChar = new String[0];
+        for (int i = 0;i < array.Length;i ++)
+        {
+            if (array[i].Length<=3)
+            {
+                Array.Resize(ref arrayOfThreeChar, arrayOfThreeChar.Length + 1);
+                arrayOfThreeChar [arrayOfThreeChar.Length - 1] = array [i];
+            }
+        }
+        return arrayOfThreeChar;
+    }
 }
